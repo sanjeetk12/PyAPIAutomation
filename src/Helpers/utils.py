@@ -10,3 +10,9 @@ def get_pay_load_auth():
     file_date.close()
     return data
 
+
+def common_headers():
+    headers = {
+        "Content-Type": "application/json"
+    }
+    return headers

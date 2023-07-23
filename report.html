@@ -253,10 +253,10 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 23-Jul-2023 at 17:55:21 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 23-Jul-2023 at 23:18:49 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Summary</h2>
-    <p>3 tests ran in 0.14 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>1 tests ran in 0.20 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -270,27 +270,9 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_create_booking_tc3</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;tests.intergration_tests.test_create_booking.TestIntegration object at 0x000001A45F334690&gt;<br/><br/>    def test_create_booking_tc3(self):<br/>&gt;       assert True == False<br/><span class="error">E       assert True == False</span><br/><br/>tests\intergration_tests\test_create_booking.py:14: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_create_booking_tc1</td>
+          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_create_booking_tc2</td>
           <td class="col-duration">0.05</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_create_booking_tc2</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div class="log">self = &lt;tests.intergration_tests.test_create_booking.TestIntegration object at 0x0000028645004F10&gt;<br/><br/>    def test_create_booking_tc2(self):<br/>&gt;       response = patch_request(url_update_delete_booking(self.test_create_booking_tc1), header=common_headers(),<br/>                                 auth={<br/>                                     &quot;username&quot;: &quot;admin&quot;,<br/>                                     &quot;password&quot;: &quot;password123&quot;<br/>                                 },<br/>                                 in_json=False,<br/>                                 payload=patch_update())<br/><br/>tests\intergration_tests\test_create_booking.py:28: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>src\Helpers\api_wrapper.py:20: in patch_request<br/>    patch_response_data = requests.get(url=url, auth=auth, headers=header, data=json.dumps(payload))<br/>venv\Lib\site-packages\requests\api.py:73: in get<br/>    return request(&quot;get&quot;, url, params=params, **kwargs)<br/>venv\Lib\site-packages\requests\api.py:59: in request<br/>    return session.request(method=method, url=url, **kwargs)<br/>venv\Lib\site-packages\requests\sessions.py:575: in request<br/>    prep = self.prepare_request(req)<br/>venv\Lib\site-packages\requests\sessions.py:486: in prepare_request<br/>    p.prepare(<br/>venv\Lib\site-packages\requests\models.py:372: in prepare<br/>    self.prepare_auth(auth, url)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;PreparedRequest [GET]&gt;, auth = {&#x27;password&#x27;: &#x27;password123&#x27;, &#x27;username&#x27;: &#x27;admin&#x27;}<br/>url = &#x27;https://restful-booker.herokuapp.com/booking/&lt;bound method TestIntegration.test_create_booking_tc1 of &lt;tests.intergration_tests.test_create_booking.TestIntegration object at 0x0000028645004F10&gt;&gt;&#x27;<br/><br/>    def prepare_auth(self, auth, url=&quot;&quot;):<br/>        &quot;&quot;&quot;Prepares the given HTTP auth data.&quot;&quot;&quot;<br/>    <br/>        # If no Auth is explicitly provided, extract it from the URL first.<br/>        if auth is None:<br/>            url_auth = get_auth_from_url(self.url)<br/>            auth = url_auth if any(url_auth) else None<br/>    <br/>        if auth:<br/>            if isinstance(auth, tuple) and len(auth) == 2:<br/>                # special-case basic HTTP auth<br/>                auth = HTTPBasicAuth(*auth)<br/>    <br/>            # Allow auth to make its changes.<br/>&gt;           r = auth(self)<br/><span class="error">E           TypeError: &#x27;dict&#x27; object is not callable</span><br/><br/>venv\Lib\site-packages\requests\models.py:603: TypeError<br/></div></td></tr></tbody></table></body></html>
