@@ -65,7 +65,7 @@ class TestIntegration(object):
                                   payload=create_booking())
         verify_http_code(response, 201)
 
-    def test_get_delete_id_tc5(self, test_create_token_tc2):
+    def test_get_delete_id_tc5(self):
         global booking_id
         response = get_request(url_update_delete_booking(str(booking_id)),
                                header=common_headers(),
