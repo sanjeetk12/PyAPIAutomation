@@ -16,18 +16,7 @@ booking_id = None
 class TestIntegration(object):
 
     @pytest.fixture
-    def test_create_booking_tc1(self):
-        global booking_id
-        response = post_request(url_create_booking(), header=common_headers(), auth=None, in_json=False,
-                                payload=create_booking())
-        verify_http_code(response, 200)
-        booking_id = response.json()["bookingid"]
-        print(response.json())
-        verify_key(booking_id)
-        return booking_id
-
-    @pytest.fixture
-    def test_create_token_tc2(self):
+    def test_create_token_tc1(self):
         response = post_request(url_create_token(), header=common_headers(), auth=None, in_json=False,
                                 payload=create_token())
         verify_http_code(response, 200)
@@ -35,16 +24,28 @@ class TestIntegration(object):
         print(token)
         return response.json()["token"]
 
-    def test_patch_update_tc3(self, test_create_booking_tc1, test_create_token_tc2):
-        response = patch_request(url_update_delete_booking(str(test_create_booking_tc1)),
-                                 header=token_headers(test_create_token_tc2),
+    def test_create_booking_tc2(self):
+        global booking_id
+        response = post_request(url_create_booking(), header=common_headers(), auth=None, in_json=False,
+                                payload=create_booking())
+        verify_http_code(response, 200)
+        booking_id = response.json()["bookingid"]
+        print(response.json())
+        verify_key(booking_id)
+        # return booking_id
+
+    def test_patch_update_tc3(self, test_create_token_tc1):
+        global booking_id
+        response = patch_request(url_update_delete_booking(str(booking_id)),
+                                 header=token_headers(test_create_token_tc1),
                                  auth=None,
                                  in_json=False,
                                  payload=patch_update())
         verify_http_code(response, 200)
         print(response.json())
+        print(booking_id)
 
-    def test_get_tc4(self, test_create_booking_tc1):
+    def test_get_tc4(self):
         global booking_id
         response = get_request(url_update_delete_booking(str(booking_id)),
                                header=common_headers(),
@@ -53,5 +54,22 @@ class TestIntegration(object):
                                payload=get_booking())
         verify_http_code(response, 200)
         print(response.json())
-# def test_create_booking_tc3(self):
-#     assert True == False
+        print(booking_id)
+
+    def test_delete_tc5(self, test_create_token_tc1):
+        global booking_id
+        response = delete_request(url_update_delete_booking(str(booking_id)),
+                                  header=token_headers(test_create_token_tc1),
+                                  auth=None,
+                                  in_json=False,
+                                  payload=create_booking())
+        verify_http_code(response, 201)
+
+    def test_get_delete_id_tc5(self, test_create_token_tc2):
+        global booking_id
+        response = get_request(url_update_delete_booking(str(booking_id)),
+                               header=common_headers(),
+                               auth=None,
+                               in_json=False,
+                               payload=get_booking())
+        verify_http_code(response, 404)

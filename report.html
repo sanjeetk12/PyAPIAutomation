@@ -253,10 +253,10 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 24-Jul-2023 at 22:14:12 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 24-Jul-2023 at 22:40:28 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Summary</h2>
-    <p>2 tests ran in 4.86 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>5 tests ran in 19.20 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">5 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -270,23 +270,53 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_patch_update_tc3</td>
-          <td class="col-duration">2.93</td>
+          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_create_booking_tc1</td>
+          <td class="col-duration">4.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;bookingid&#x27;: 758, &#x27;booking&#x27;: {&#x27;firstname&#x27;: &#x27;San&#x27;, &#x27;lastname&#x27;: &#x27;Kosi&#x27;, &#x27;totalprice&#x27;: 112, &#x27;depositpaid&#x27;: True, &#x27;bookingdates&#x27;: {&#x27;checkin&#x27;: &#x27;2018-01-01&#x27;, &#x27;checkout&#x27;: &#x27;2018-01-01&#x27;}, &#x27;additionalneeds&#x27;: &#x27;Breakfast&#x27;}}
-c75b1d0e920309f
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;bookingid&#x27;: 887, &#x27;booking&#x27;: {&#x27;firstname&#x27;: &#x27;San&#x27;, &#x27;lastname&#x27;: &#x27;Kosi&#x27;, &#x27;totalprice&#x27;: 112, &#x27;depositpaid&#x27;: True, &#x27;bookingdates&#x27;: {&#x27;checkin&#x27;: &#x27;2018-01-01&#x27;, &#x27;checkout&#x27;: &#x27;2018-01-01&#x27;}, &#x27;additionalneeds&#x27;: &#x27;Breakfast&#x27;}}
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_patch_update_tc3</td>
+          <td class="col-duration">4.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>5c9dd3879128a34
 <br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;firstname&#x27;: &#x27;Sanjeet&#x27;, &#x27;lastname&#x27;: &#x27;Bhavik&#x27;, &#x27;totalprice&#x27;: 112, &#x27;depositpaid&#x27;: True, &#x27;bookingdates&#x27;: {&#x27;checkin&#x27;: &#x27;2018-01-01&#x27;, &#x27;checkout&#x27;: &#x27;2018-01-01&#x27;}, &#x27;additionalneeds&#x27;: &#x27;Breakfast&#x27;}
+887
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_get_tc4</td>
-          <td class="col-duration">1.82</td>
+          <td class="col-duration">2.55</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>{&#x27;bookingid&#x27;: 781, &#x27;booking&#x27;: {&#x27;firstname&#x27;: &#x27;San&#x27;, &#x27;lastname&#x27;: &#x27;Kosi&#x27;, &#x27;totalprice&#x27;: 112, &#x27;depositpaid&#x27;: True, &#x27;bookingdates&#x27;: {&#x27;checkin&#x27;: &#x27;2018-01-01&#x27;, &#x27;checkout&#x27;: &#x27;2018-01-01&#x27;}, &#x27;additionalneeds&#x27;: &#x27;Breakfast&#x27;}}
-<br/> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;firstname&#x27;: &#x27;San&#x27;, &#x27;lastname&#x27;: &#x27;Kosi&#x27;, &#x27;totalprice&#x27;: 112, &#x27;depositpaid&#x27;: True, &#x27;bookingdates&#x27;: {&#x27;checkin&#x27;: &#x27;2018-01-01&#x27;, &#x27;checkout&#x27;: &#x27;2018-01-01&#x27;}, &#x27;additionalneeds&#x27;: &#x27;Breakfast&#x27;}
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;firstname&#x27;: &#x27;Sanjeet&#x27;, &#x27;lastname&#x27;: &#x27;Bhavik&#x27;, &#x27;totalprice&#x27;: 112, &#x27;depositpaid&#x27;: True, &#x27;bookingdates&#x27;: {&#x27;checkin&#x27;: &#x27;2018-01-01&#x27;, &#x27;checkout&#x27;: &#x27;2018-01-01&#x27;}, &#x27;additionalneeds&#x27;: &#x27;Breakfast&#x27;}
+887
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_delete_tc5</td>
+          <td class="col-duration">3.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>8bc8f646e92334b
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/intergration_tests/test_create_booking.py::TestIntegration::test_get_delete_tc5</td>
+          <td class="col-duration">4.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>a32450495e6cbb1
 <br/></div></td></tr></tbody></table></body></html>
